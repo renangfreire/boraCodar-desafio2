@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardProduct - #boraCodar</title>
+
+    <!-- TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'lato': ['lato', 'sans-serif'],
+                    'crimsonPro': ['Crimson Pro', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                       lightPurple: '#D9CDF7',
+                       darkPurple: '#271A45',
+                       lightViolet: '#61557F'
+                    },
+                    fontSize: {
+                    tsm: '0.625rem'
+                    },
+                    dropShadow: {
+                        titleShadow: '0 4px 4px rgba(0,0,0,.25)'
+                    },
+                    animation: {
+                        fadeIn: "fadeIn .4s"
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            "0%": { opacity: 0},
+                            "100%": {opacity: 1}
+                        }
+                    }
+                    
+                }
+            }
+        }
+    </script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body class="bg-lightPurple font-lato">
+    <main class="text-darkPurple min-w-screen flex justify-center h-screen items-center gap-3">
+        <div class="product-image relative">
+            <button class="enable-360 z-10 absolute right-10
+                top-2"><img class='button-360 'src="./images/360button.svg" alt=""></button>
+            <img class='sofa-image w-[448px] h-[253px] z-0' src="./images/sofá.png" alt="">
+        </div>
+        <div class="product-info">
+            <div class="text-info flex gap-3 flex-col">
+                <h4 class="font-light text-tsm">Código: 42404</h4>
+            <h1 class="font-semibold drop-shadow-titleShadow font-crimsonPro text-[2rem]">Sofá Margot II - Rosé</h1>
+            <p class="font-base text-base text-lightViolet">R$ 4.000</p>
+            </div>
+            <button class="mt-5 duration-200 hover:bg-darkPurple hover:text-lightPurple border-darkPurple font-regular add-product border px-4 py-2 rounded-full text-xs uppercase">
+                Adicionar à Cesta
+            </button>
+        </div>
+    </main>
+</body>
+<script src="./js/main.js"></script>
+</html>
